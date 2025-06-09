@@ -17,10 +17,20 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
+
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(DirtMod.MOD_ID)
 public class DirtMod
 {
+
+    public YourMod(IEventBus modBus) {
+        ModFluidTypes.FLUID_TYPES.register(modBus);
+        ModFluids.FLUIDS.register(modBus);
+        ModBlocks.BLOCKS.register(modBus);
+        ModItems.ITEMS.register(modBus);
+    }
+
+
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "dirtmod";
     // Directly reference a slf4j logger
@@ -31,6 +41,8 @@ public class DirtMod
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public DirtMod(IEventBus modEventBus, ModContainer modContainer)
     {
+
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 

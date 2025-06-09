@@ -1,5 +1,7 @@
 {
-  "itemGroup.examplemod": "Example Mod Tab",
-  "block.examplemod.example_block": "Example Block",
-  "item.examplemod.example_item": "Example Item"
+  "itemGroup.dirtmod": "Example Mod Tab",
+  "block.dirtmod.example_block": "Example Block",
+  "item.dirtmod.example_item": "Example Item",
+  "block.dirtmod.example_fluid_block": "Dirt Lava",
+  "item.dirtmod.example_fluid_bucket": "Dirt Lava Bucket"
 }
